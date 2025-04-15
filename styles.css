@@ -350,6 +350,7 @@ nav .logo-nav .logo-text span {
   display: block;
   border-radius: 5px;
   max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Align right-side content to the left */
