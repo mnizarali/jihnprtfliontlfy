@@ -37,133 +37,156 @@ nav {
 nav .logo-nav .logo-text span {
   color: var(--primary-color);
 }
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width minus the margin */
-    z-index: 999;
-    transition: all 0.6s ease;
-    box-shadow: none;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Full width minus the margin */
+  z-index: 999;
+  transition: all 0.6s ease;
+  box-shadow: none;
+  box-sizing: border-box;
 }
 
 /* Change style when scrolled */
 .navbar.scrolled {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow when scrolled */
-    border-radius: 50px;
-    background-color: #fff;
-    padding: 10px 10px;
-    margin: 20px 30px 0px 20px;
-    width: calc(100% - 40px);
-    height: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Add shadow when scrolled */
+  border-radius: 50px;
+  background-color: #fff;
+  padding: 10px 10px;
+  margin: 20px 30px 0px 20px;
+  width: calc(100% - 40px);
+  height: 40px;
 }
 
 /* Style for the navigation links */
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    text-align: right;
-    margin-right: 110px;
-    transition: all 0.5s ease; /* Added transition for nav links */
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  margin-right: 110px;
+  transition: all 0.5s ease;
+  /* Added transition for nav links */
 }
 
 .nav-links li {
-    display: inline-block;
-    position: relative; /* Position relative to enable pseudo-element */
+  display: inline-block;
+  position: relative;
+  /* Position relative to enable pseudo-element */
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    padding: 10px;
-    transition: color 0.3s;
-    margin-right: 10px;
-    transition: color 0.3s, padding 0.3s;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  padding: 10px;
+  transition: color 0.3s;
+  margin-right: 10px;
+  transition: color 0.3s, padding 0.3s;
 }
 
 /* Underline effect for links */
 .nav-links a::after {
-    content: ""; /* Create an empty pseudo-element */
-    display: block;
-    width: 0; /* Start with no width */
-    height: 2px; /* Set the height of the line */
-    background: #007bff; /* Color of the underline */
-    transition: width 0.3s; /* Animation for the width */
-    position: absolute;
-    bottom: -5px; /* Position the line below the text */
-    left: 0; /* Align to the left */
+  content: "";
+  /* Create an empty pseudo-element */
+  display: block;
+  width: 0;
+  /* Start with no width */
+  height: 2px;
+  /* Set the height of the line */
+  background: #007bff;
+  /* Color of the underline */
+  transition: width 0.3s;
+  /* Animation for the width */
+  position: absolute;
+  bottom: -5px;
+  /* Position the line below the text */
+  left: 0;
+  /* Align to the left */
 }
+
 .nav-links a.active {
-    color: #007bff; /* Change text color for active link */
-    font-weight: bold; /* Optional: make the active link bold */
+  color: #007bff;
+  /* Change text color for active link */
+  font-weight: bold;
+  /* Optional: make the active link bold */
 }
+
 /* Underline on hover */
 .nav-links a:hover::after {
-    width: 90%; /* Expand width to full on hover */
+  width: 90%;
+  /* Expand width to full on hover */
 }
 
 /* Underline for active link */
 .nav-links a.active::after {
-    width: 90%; /* Show underline for active link */
+  width: 90%;
+  /* Show underline for active link */
 }
+
 .nav-links a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 .logo-nav {
-    display: flex; /* Use flexbox to align logo and text */
-    align-items: center; /* Vertically center the items */
-    transition: all 0.6s ease;
-    /* margin-top: 40px; */
-    margin-left: 40px;
+  display: flex;
+  /* Use flexbox to align logo and text */
+  align-items: center;
+  /* Vertically center the items */
+  transition: all 0.6s ease;
+  /* margin-top: 40px; */
+  margin-left: 40px;
 }
 
-.logo-nav img{
-    margin-top: 5px;
-    margin-left: 100px;
-    height: 50px;
-    width: 50px;
-    transition: all 0.6s ease;
+.logo-nav img {
+  margin-top: 5px;
+  margin-left: 100px;
+  height: 50px;
+  width: 50px;
+  transition: all 0.6s ease;
 }
-.logo-nav.scrolled img{
-    margin-top: 0;
-    margin-left: 0;
-    height: 50px;
-    width: 50px;
+
+.logo-nav.scrolled img {
+  margin-top: 0;
+  margin-left: 0;
+  height: 50px;
+  width: 50px;
 }
 
 .logo-text {
-    font-weight:500;
-    margin-left: 5px;
-    font-size: 20px; 
-    color: black;
+  font-weight: 500;
+  margin-left: 5px;
+  font-size: 20px;
+  color: black;
 }
 
 
 .toggle_button {
-    display: none;
+  display: none;
 }
 
 .navbar.scrolled .nav-links {
-    margin-right: 40px; 
-    transition: margin-right 0.5s ease;
+  margin-right: 40px;
+  transition: margin-right 0.5s ease;
 }
 
 @media (max-width: 992px) {
-    .toggle_button {
-        display: none;
-    }
+  .toggle_button {
+    display: none;
+  }
 }
+
 /* END NAV */
 .font-download {
   font-family: "Montserrat", sans-serif;
@@ -295,30 +318,133 @@ nav .logo-nav .logo-text span {
 .text-kosong {
   display: none;
 }
+
+/* About Me */
+
+.about-me {
+  margin-top: 90px;
+  color: var(--text-dark);
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Center image vertically */
+.left-side-about {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img {
+  height: 400px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+/* Align right-side content to the left */
+.right-side-about {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.right-side-about h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.right-side-about p {
+  text-align: left;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.about-info {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.about-info li {
+  display: flex;
+  align-items: center;
+}
+
+.about-info .list-about-left {
+  display: inline-block;
+  width: 120px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.about-info .whatsapp-link {
+  margin-top: 15px;
+  text-align: left;
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.about-info .whatsapp-link:hover {
+  text-decoration: underline;
+}
+
 /* === Mobile Styles === */
 @media (max-width: 768px) {
   .header__image img {
-  width: 90%;
-  max-width: 550px;
-  margin-inline: auto;
-  display: flex;
-  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
-}
+    width: 90%;
+    max-width: 550px;
+    margin-inline: auto;
+    display: flex;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+  }
+
   .navbar {
-    display: flex; /* Use flexbox for the navbar */
-    justify-content: space-between; /* Space between logo and nav links */
-    align-items: left ; /* Center items vertically */
-    padding: 10px; /* Add some padding */
+    display: flex;
+    /* Use flexbox for the navbar */
+    justify-content: space-between;
+    /* Space between logo and nav links */
+    align-items: left;
+    /* Center items vertically */
+    padding: 10px;
+    /* Add some padding */
   }
 
   .logo-nav {
-    display: flex; /* Use flexbox for the logo container */
-    justify-content: left; /* Center the logo text horizontally */
-    align-items: left; /* Center the logo text vertically */
-    flex-grow: 1; /* Allow the logo container to grow */
+    display: flex;
+    /* Use flexbox for the logo container */
+    justify-content: left;
+    /* Center the logo text horizontally */
+    align-items: left;
+    /* Center the logo text vertically */
+    flex-grow: 1;
+    /* Allow the logo container to grow */
   }
 
-  .logo-text{
+  .logo-text {
     display: none;
     height: 30px;
   }
@@ -326,6 +452,7 @@ nav .logo-nav .logo-text span {
   .text-kosong {
     display: block;
   }
+
   /* .logo-text {
     margin-left: 50px;
     transition: margin-left 0.3s ease; 
@@ -359,80 +486,165 @@ nav .logo-nav .logo-text span {
   }
 
   .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
 
-    .toggle_button {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 22px;
-        transition: transform 0.5s ease; /* Added for animation */
-    }
+  .toggle_button {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    transition: transform 0.5s ease;
+    /* Added for animation */
+  }
 
-    /* Hide the nav-links by default on mobile */
-    .nav-links {
-        display: none; /* Hide navigation links initially */
-    }
+  /* Hide the nav-links by default on mobile */
+  .nav-links {
+    display: none;
+    /* Hide navigation links initially */
+  }
 
-    /* When the navbar is active, show the nav-links as a white card */
-    .navbar.active .nav-links {
-        display: flex;
-        flex-direction: column;
-        width: 50%; /* Adjust size (75% of screen) */
-        background-color: white; /* White card background */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
-        position: absolute;
-        right: 0;
-        top: 60px; /* Adjust to place it below the navbar */
-        padding: 20px;
-        border-radius: 10px; /* Add rounded corners */
-        z-index: 999;
-        margin-top: 15px;
-        margin-right: 20px;
-        transition: margin-right 0.3s ease;
-    }
+  /* When the navbar is active, show the nav-links as a white card */
+  .navbar.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* Adjust size (75% of screen) */
+    background-color: white;
+    /* White card background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+    position: absolute;
+    right: 0;
+    top: 60px;
+    /* Adjust to place it below the navbar */
+    padding: 20px;
+    border-radius: 10px;
+    /* Add rounded corners */
+    z-index: 999;
+    margin-top: 15px;
+    margin-right: 20px;
+    transition: margin-right 0.3s ease;
+  }
 
-    .nav-links li {
-        margin-bottom: 10px; /* Add spacing between links */
-    }
-    .nav-links a::after {
-        content: ""; /* Create an empty pseudo-element */
-        display: block;
-        width: 0; /* Start with no width */
-        height: 2px; /* Height of the underline */
-        background: #007bff; /* Color of the underline */
-        transition: width 0.3s ease; /* Animation for width */
-        position: absolute;
-        bottom: -5px; /* Adjust the position */
-        left: 0;
-    }
+  .nav-links li {
+    margin-bottom: 10px;
+    /* Add spacing between links */
+  }
 
-    /* Underline on hover */
-    .nav-links a:hover::after {
-        width: 100%; /* Expand the underline to the full text width */
-    }
+  .nav-links a::after {
+    content: "";
+    /* Create an empty pseudo-element */
+    display: block;
+    width: 0;
+    /* Start with no width */
+    height: 2px;
+    /* Height of the underline */
+    background: #007bff;
+    /* Color of the underline */
+    transition: width 0.3s ease;
+    /* Animation for width */
+    position: absolute;
+    bottom: -5px;
+    /* Adjust the position */
+    left: 0;
+  }
 
-    /* Underline for active link */
-    .nav-links a.active::after {
-        width: 100%; /* Show the underline only under the text */
-    }
+  /* Underline on hover */
+  .nav-links a:hover::after {
+    width: 100%;
+    /* Expand the underline to the full text width */
+  }
 
-    /* Prevent the underline from expanding to the full width of the container */
-    .nav-links a {
-        position: relative; /* Make sure the underline stays under the text */
-        display: inline-block; /* Ensure the link's width is based on its text */
-    }
-    .navbar.scrolled .nav-links {
-        margin-right: 0; /* Remove margin when scrolled */
-    }
-    /* Adjust the position and size of the hamburger rotation */
-    .toggle_button.active {
-        transform: rotate(-90deg); /* Rotate when active */
-    }
+  /* Underline for active link */
+  .nav-links a.active::after {
+    width: 100%;
+    /* Show the underline only under the text */
+  }
+
+  /* Prevent the underline from expanding to the full width of the container */
+  .nav-links a {
+    position: relative;
+    /* Make sure the underline stays under the text */
+    display: inline-block;
+    /* Ensure the link's width is based on its text */
+  }
+
+  .navbar.scrolled .nav-links {
+    margin-right: 0;
+    /* Remove margin when scrolled */
+  }
+
+  /* Adjust the position and size of the hamburger rotation */
+  .toggle_button.active {
+    transform: rotate(-90deg);
+    /* Rotate when active */
+  }
+
+  /* MOBILE ABOUT ME */
+  .about-me {
+    margin-top: 30px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .left-side-about {
+    display: none;
+    /* Hide the left side on mobile */
+  }
+
+  .right-side-about {
+    max-width: 100%;
+    margin: 20px;
+    /* Margin for spacing */
+  }
+
+  .right-side-about h2 {
+    font-size: 28px;
+    /* Font size for the heading */
+    text-align: center;
+    /* Center the heading */
+    margin-bottom: 15px;
+    /* Optional: Add some space below the heading */
+  }
+
+  .right-side-about p {
+    text-align: left;
+    /* Align paragraph text to the left */
+  }
+
+  .about-info {
+    align-items: flex-start;
+    /* Align items to the left */
+    text-align: left;
+    /* Align text to the left */
+  }
+
+  .about-info li {
+    display: flex;
+    /* Ensure list items are flex containers */
+    justify-content: flex-start;
+    /* Align items to the left */
+    gap: 10px;
+    /* Space between label and data */
+  }
+
+  .about-info .whatsapp-link {
+    text-align: left;
+    /* Align link text to the left */
+  }
+
+  .about-info .list-about-left {
+    width: 80px;
+    /* Width for the left span in list items */
+  }
+
 }
