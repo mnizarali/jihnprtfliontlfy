@@ -82,11 +82,11 @@ window.onload = function () {
         } else if (currentUrl.includes('index.html')) { // Check for index.html with hash
             if (linkHref.includes('#')) { // Only for links with anchors
                 // Remove active class from Home when on index.html with hash
-                if (linkHref === 'index.html#dokumentasi' && currentUrl.includes('#dokumentasi')) {
+                if (linkHref === 'index.html' && currentUrl.includes('')) {
                     link.classList.add('active');
-                } else if (linkHref === '#alumni' && currentUrl.includes('#alumni')) {
+                } else if (linkHref === '#about' && currentUrl.includes('#about')) {
                     link.classList.add('active');
-                } else if (linkHref === '#kegiatan' && currentUrl.includes('#kegiatan')) {
+                } else if (linkHref === '#resume' && currentUrl.includes('#resume')) {
                     link.classList.add('active');
                 }
             }

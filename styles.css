@@ -27,6 +27,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #eff3ff;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* NAV */
@@ -413,6 +414,131 @@ nav .logo-nav .logo-text span {
   text-decoration: underline;
 }
 
+/* Page Resume */
+.resume {
+  padding: 5em 0;
+}
+
+.resume .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.resume .container .row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.resume .container .title {
+  margin-bottom: 3rem !important;
+}
+
+.resume .container .title .heading{
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
+}
+.resume .container .title .heading h2{
+  color: var(--primary-color);
+  font-size: 30px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+.resume .container .title .heading h2 strong{
+  font-weight: 800;
+}
+
+.resume .container .row h2{
+  font-size: 25px;
+  margin-bottom: 0.5rem !important;
+}
+.resume-row {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+.resume .container .row .resume-row h2{
+  padding: 1em;
+  justify-content: center;
+  text-align: center;
+}
+
+.resume .container {
+  padding : 3em ;
+}
+
+.resume-item {
+  padding: 30px;
+  /* background: rgb(237, 231, 231); */
+  background: white;
+  /* border: 4px solid transparent; */
+  border-radius: 7px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 240px;
+}
+
+.resume-item .date {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.resume-item h3{
+  color : var(--primary-color);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.resume-item p{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color : rgb(72, 72, 72);
+}
+
+.resume-item .school {
+  color :#1c6168;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .resume .container .row {
+    flex-direction: column;
+  }
+
+  .resume-row {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media(max-width : 376px) {
+  .resume-item {
+      height: auto;
+    }
+}
+@media (max-width: 768px) {
+  .resume .container {
+      padding: 0;
+    }
+  .resume {
+    padding: 3em 1em;
+  }
+
+  .resume-item {
+    padding: 20px;
+  }
+
+  .resume .container .title .heading h2 {
+    font-size: 24px;
+  }
+}
 /* === Mobile Styles === */
 @media (max-width: 768px) {
   .header__image img {
